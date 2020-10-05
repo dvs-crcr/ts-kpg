@@ -4,9 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Генератор ключевых фраз — Keyword Phrase Generator 🎲</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <style>
+
+    </style>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <div class="container">
+        <h1>🎲 Генератор ключевых фраз</h1>
+        <div>
+            <a href="#" onclick="addColumn(); return false;">Добавить список</a>
+        </div>
+        <ul id="columns"></ul>
+        <div>
+            <a href="#" onclick="generateResults(); return false;">Сгенерировать результат</a>
+            <a href="#" onclick="saveResults(); return false;">Скачать</a>
+        </div>
+        <textarea id="results"></textarea>
+    </div>
+    <script src="keygen.js"></script>
+    <script>
+        
+        const KPG = new KeywordGenerator()
+        window.onload = function() {
+            let results = KPG.generate([
+                ['гнератор', 'комбинатор'],
+                ['ключевых фраз', 'ключевых слов'],
+                ['для SEO', 'для Яндекс.Директ', 'для Google Adwords'],
+                ['бесплатно', 'попробовать', 'скачать', 'онлайн']
+            ])
+        }
+        
+        /** Добавление списка */
+        function addColumn(content = [[''],['']]) {
+            // добавление колонки с содержанием
+            console.log('add column')
+        }
+        /** Генерация результатов */
+        function generateResults() {
+            // получение контента из списков 
+            // заворачивание в массивы
+            // передача в ф-ию generate
+            let results = KPG.generate()
+            document.getElementById('results').value = results.join("\n")
+        }
+        /** Сохранение результатов */
+        function saveResults() {
+            let resultText = document.getElementById('results').value
+            let url = KPG.createBlobUrl(resultText)
+            downloadUrl(url)
+        }
+        /** Создание ссылки для скачивания */
+        function downloadUrl(url, filename = 'results.txt') {
+            let fakeLink = document.createElement('a')
+            fakeLink.setAttribute('download', filename)
+            fakeLink.href = url
+            document.body.appendChild(fakeLink)
+            fakeLink.click()
+            fakeLink.remove()
+        }
+    </script>
 </body>
 </html>
