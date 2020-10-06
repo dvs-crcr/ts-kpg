@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 .github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
 * {
     margin: 0;
@@ -17,6 +17,37 @@ h1 {
     font-weight: 100;
     font-size: 3rem;
     margin: 10px 0px;
+}
+div#description {
+    margin: 0px 75px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+div#top_buttons {
+    text-align: right;
+}
+.btn {
+    color: #ffffff;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.8rem;
+    display: inline-block;
+    &:hover {
+        opacity: 0.8;
+    }
+    &.btn_orange {
+        background-color: #e0b30d;
+        margin: 10px;
+    }
+    &.btn_green {
+        background-color: #099407;
+        margin: 0px 10px 10px 0px;
+    }
+    &.btn_blue {
+        background-color: #0d75e0;
+        margin: 0px 10px 10px 0px;
+    }
 }
 ul#columns {
     list-style-type: none;
@@ -71,4 +102,20 @@ ul#columns {
             line-height: 17px;
         }
     }
+}
+div#count_results {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    font-weight: 200;
+    background-color: #f5f5f5;
+    margin: 10px 5px;
+    border-radius: 10px;
+}
+textarea#results {
+    width: 100%;
+    min-height: 300px;
+    margin-bottom: 30px;
+    line-height: 1.1rem;
+    padding: 5px 10px;
+    box-sizing: border-box;
 }
