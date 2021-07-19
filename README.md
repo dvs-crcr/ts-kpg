@@ -6,11 +6,4 @@
 
 Пожелания и дополнения приветствуются!
 
-## Try it!
-
-Доступен по адресу [https://kpg.crcr.ru](https://kpg.crcr.ru/)
-
-## Changelog
-
-`2020-10-06`
-* Релиз версии 1.0.0
+[https://kpg.crcr.ru](https://kpg.crcr.ru/)
