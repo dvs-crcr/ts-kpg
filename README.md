@@ -6,4 +6,4 @@
 
 Пожелания и дополнения приветствуются!
 
-[https://kpg.crcr.ru](https://kpg.crcr.ru/)
+[https://hungry-stonebraker-2f1594.netlify.app/](https://hungry-stonebraker-2f1594.netlify.app/)
